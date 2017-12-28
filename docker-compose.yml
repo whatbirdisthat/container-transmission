@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  transmission:
+    image: wbit/transmission
+    dns: 10.0.0.138
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+      - "51413:51413/udp"
+    volumes:
+      - ./downloads:/transmission/download
+
